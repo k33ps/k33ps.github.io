@@ -1,0 +1,125 @@
+---
+---
+// Dark palette — minima 2.5 variables are all `!default`, so setting them
+// before the import replaces the light theme wholesale.
+$brand-color:      #58a6ff;
+$text-color:       #c9d1d9;
+$background-color: #0d1117;
+$grey-color:       #8b949e;
+$grey-color-light: #30363d; // borders, rules, table stripes
+$grey-color-dark:  #e6edf3; // headings, site title, nav links
+
+@import "minima";
+
+// ---- fixes for values minima hardcodes for light mode ----
+
+a:visited {
+  color: $brand-color;
+}
+
+pre,
+code {
+  background-color: #161b22;
+  border-color: $grey-color-light;
+}
+
+.site-header {
+  border-top: none;
+}
+
+.highlight {
+  background: #161b22;
+
+  .highlighter-rouge & { background: #161b22; }
+
+  // dark syntax colors (GitHub-dark inspired)
+  .c, .cm, .c1, .cs { color: #8b949e; font-style: italic; }
+  .k, .kd, .kn, .kp, .kr, .kt, .o, .ow { color: #ff7b72; }
+  .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx, .sr, .ss { color: #a5d6ff; }
+  .m, .mf, .mh, .mi, .mo, .il { color: #79c0ff; }
+  .na, .nb, .nc, .nf, .nn { color: #d2a8ff; }
+  .nv, .no { color: #79c0ff; }
+  .nt { color: #7ee787; }
+  .gd { color: #ffa198; background-color: #490202; }
+  .gi { color: #56d364; background-color: #0f5323; }
+  .err { color: #f85149; background-color: transparent; }
+  .gh, .gu { color: $grey-color-dark; }
+}
+
+// ---- landing hero ----
+
+.home-hero {
+  min-height: 55vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 2.75em;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: $grey-color-dark;
+  margin-bottom: 18px;
+
+  @include media-query($on-palm) {
+    font-size: 2em;
+  }
+}
+
+.hero-tagline {
+  font-size: 1.4em;
+  font-weight: 300;
+  color: $grey-color;
+  margin-bottom: 42px;
+
+  a,
+  a:visited {
+    color: $grey-color-dark;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid $brand-color;
+  }
+
+  a:hover {
+    color: $brand-color;
+    text-decoration: none;
+  }
+
+  @include media-query($on-palm) {
+    font-size: 1.15em;
+  }
+}
+
+.hero-links {
+  font-size: 0.95em;
+  color: $grey-color;
+
+  a,
+  a:visited {
+    color: $grey-color;
+  }
+
+  a:hover {
+    color: $brand-color;
+  }
+}
+
+// ---- category / archive listings ----
+
+.page-heading {
+  font-size: 2em;
+  color: $grey-color-dark;
+}
+
+.category-count {
+  color: $grey-color;
+  font-size: 0.9em;
+}
+
+.archive-year {
+  margin-top: 32px;
+  color: $grey-color-dark;
+}

@@ -19,11 +19,16 @@
 # in the templates via {{ site.myvariable }}.
 
 title: 김씨표류기
-email: your-email@example.com
+email: ""
 description: >- # this means to ignore newlines until "baseurl:"
   김선범 블로그
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.sunbum.kim" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Only these pages appear in the header nav (category pages are reached
+# from the landing hero instead).
+header_pages:
+  - archive.md
 #twitter_username: jekyllrb
 #github_username:  jekyll
 
@@ -31,6 +36,9 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 theme: minima
 plugins:
   - jekyll-feed
+
+exclude:
+  - CLAUDE.md
 
 # Exclude from processing.
 # The following items will not be processed, by default.
