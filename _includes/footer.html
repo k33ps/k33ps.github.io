@@ -16,5 +16,23 @@
       var d = 'moc.liamg'.split('').reverse().join('');
       a.href = 'mailto:' + u + '@' + d;
     })();
+    // wrap image-only paragraphs into figures, captioned from alt text
+    (function () {
+      document.querySelectorAll('.post-content p').forEach(function (p) {
+        if (p.textContent.trim() !== '' || !p.querySelector('img')) return;
+        p.querySelectorAll('img').forEach(function (img) {
+          var fig = document.createElement('figure');
+          p.parentNode.insertBefore(fig, p);
+          fig.appendChild(img);
+          var alt = img.getAttribute('alt');
+          if (alt) {
+            var cap = document.createElement('figcaption');
+            cap.textContent = alt;
+            fig.appendChild(cap);
+          }
+        });
+        p.remove();
+      });
+    })();
   </script>
 </footer>

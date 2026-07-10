@@ -159,6 +159,26 @@ code {
   }
 }
 
+// ---- post images: ![caption](src) is wrapped into figure/figcaption
+//      by the small script in footer.html ----
+
+.post-content figure {
+  margin: 24px auto;
+  text-align: center;
+}
+
+.post-content figure img {
+  display: block;
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+.post-content figcaption {
+  font-size: 0.9em;
+  color: $grey-color;
+  margin-top: 6px;
+}
+
 // ---- category / archive listings ----
 
 .page-heading {
