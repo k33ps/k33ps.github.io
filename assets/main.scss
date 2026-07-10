@@ -46,6 +46,27 @@ code {
   .gh, .gu { color: $grey-color-dark; }
 }
 
+// ---- footer ----
+
+.site-footer {
+  padding: 20px 0;
+  font-size: 0.9em;
+  color: $grey-color;
+
+  .footer-line {
+    margin-bottom: 0;
+  }
+
+  a,
+  a:visited {
+    color: $grey-color;
+  }
+
+  a:hover {
+    color: $brand-color;
+  }
+}
+
 // ---- landing hero ----
 
 .home-hero {

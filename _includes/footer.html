@@ -1,0 +1,20 @@
+<footer class="site-footer">
+  <div class="wrapper">
+    <p class="footer-line">
+      &copy; 2025&ndash;{{ site.time | date: "%Y" }} Sunbum Kim
+      &middot; <a href="https://github.com/k33ps">GitHub</a>
+      &middot; <a href="https://www.linkedin.com/in/sunbum-kim/">LinkedIn</a>
+      &middot; <a id="mail-link" href="#">Email</a>
+      &middot; <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+    </p>
+  </div>
+  <script>
+    (function () {
+      var a = document.getElementById('mail-link');
+      if (!a) return;
+      var u = 'mubnusmik'.split('').reverse().join('');
+      var d = 'moc.liamg'.split('').reverse().join('');
+      a.href = 'mailto:' + u + '@' + d;
+    })();
+  </script>
+</footer>
