@@ -11,7 +11,7 @@ layout: default
 
   <div class="home-recent">
     <h2 class="home-recent-title">Recent</h2>
-    <ul class="home-recent-list">
+    <ul class="post-lines">
       {%- for post in site.posts limit: 3 -%}
       <li>
         <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
@@ -19,9 +19,9 @@ layout: default
       </li>
       {%- endfor -%}
     </ul>
-  </div>
 
-  <p class="hero-links">
-    <a href="{{ '/archive/' | relative_url }}">Archive</a>
-  </p>
+    <p class="hero-links">
+      <a href="{{ '/archive/' | relative_url }}">All posts &rarr;</a>
+    </p>
+  </div>
 </div>

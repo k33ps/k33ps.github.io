@@ -11,6 +11,21 @@ $grey-color-dark:  #e6edf3; // headings, site title, nav links
 
 @import "minima";
 
+// ---- Korean typography ----
+
+body {
+  word-break: keep-all;
+}
+
+.post-content {
+  line-height: 1.7;
+}
+
+.post-title {
+  font-size: 1.8em;
+  letter-spacing: normal;
+}
+
 // ---- fixes for values minima hardcodes for light mode ----
 
 a:visited {
@@ -76,7 +91,7 @@ code {
   padding: 20px 0;
   font-size: 0.9em;
   color: $grey-color;
-  text-align: right;
+  text-align: center;
 
   .footer-line {
     margin-bottom: 0;
@@ -123,6 +138,7 @@ code {
 .hero-links {
   font-size: 0.95em;
   color: $grey-color;
+  margin-top: 8px;
 
   a,
   a:visited {
@@ -148,11 +164,13 @@ code {
   margin-bottom: 12px;
 }
 
-.home-recent-list {
+// shared one-line post list (home Recent, category pages, archive)
+.post-lines {
   list-style: none;
   margin-left: 0;
 
-  li {
+  li,
+  p {
     margin-bottom: 6px;
   }
 
@@ -167,6 +185,7 @@ code {
 
   a:hover {
     color: $brand-color;
+    text-decoration: none;
   }
 }
 
@@ -182,6 +201,7 @@ code {
   display: block;
   margin: 0 auto;
   max-width: 90%;
+  border-radius: 4px;
 }
 
 .post-content figcaption {
@@ -199,10 +219,6 @@ code {
 
 .category-page .page-heading {
   font-size: 1.4em;
-}
-
-.category-page .post-link {
-  font-size: 1.25em;
 }
 
 .category-count {
