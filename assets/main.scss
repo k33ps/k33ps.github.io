@@ -47,6 +47,14 @@ code {
   font-weight: 700;
 }
 
+.site-header-bottom {
+  margin-top: 24px;
+
+  .site-header {
+    border-bottom: none;
+  }
+}
+
 .site-title-suffix {
   float: left;
   font-size: 26px;
