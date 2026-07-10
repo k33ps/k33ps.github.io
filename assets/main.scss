@@ -27,6 +27,30 @@ code {
   border-top: none;
 }
 
+.site-title,
+.site-title:visited {
+  font-weight: 700;
+}
+
+.site-title-suffix {
+  float: left;
+  font-size: 26px;
+  line-height: 54px;
+  letter-spacing: -1px;
+  color: $grey-color;
+
+  a,
+  a:visited {
+    color: $grey-color;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $brand-color;
+    text-decoration: none;
+  }
+}
+
 .highlight {
   background: #161b22;
 
@@ -140,6 +164,10 @@ code {
 .page-heading {
   font-size: 2em;
   color: $grey-color-dark;
+}
+
+.category-page .page-heading {
+  font-size: 1.4em;
 }
 
 .category-count {

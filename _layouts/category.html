@@ -3,14 +3,8 @@ layout: default
 ---
 {%- assign posts = site.categories[page.category] -%}
 <div class="category-page">
-  <h1 class="page-heading">
-    {{ page.title }}
-    <span class="category-count">&middot; {{ posts | size }} posts</span>
-  </h1>
-
-  {%- if page.description -%}
-  <p>{{ page.description }}</p>
-  {%- endif -%}
+  <h1 class="page-heading">{{ page.description }}</h1>
+  <p class="category-count">{{ posts | size }} post{%- if posts.size != 1 -%}s{%- endif -%}</p>
 
   <ul class="post-list">
     {%- for post in posts -%}
