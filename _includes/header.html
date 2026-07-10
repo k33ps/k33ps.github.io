@@ -11,6 +11,8 @@ Both map to the same "Sunbum Kim, an engineer"-style header suffix.
     {%- assign persona = 'an engineer' -%}{%- assign persona_url = '/engineer/' -%}
   {%- when 'explorer' -%}
     {%- assign persona = 'an explorer' -%}{%- assign persona_url = '/explorer/' -%}
+  {%- when 'human' -%}
+    {%- assign persona = 'a human' -%}{%- assign persona_url = '/human/' -%}
 {%- endcase -%}
 <header class="site-header" role="banner">
   <div class="wrapper">
@@ -34,6 +36,7 @@ Both map to the same "Sunbum Kim, an engineer"-style header suffix.
         <a class="page-link" href="{{ '/family/' | relative_url }}">Dad &amp; husband</a>
         <a class="page-link" href="{{ '/engineer/' | relative_url }}">Engineer</a>
         <a class="page-link" href="{{ '/explorer/' | relative_url }}">Explorer</a>
+        <a class="page-link" href="{{ '/human/' | relative_url }}">Human</a>
       </div>
     </nav>
     {%- endif -%}
