@@ -2,18 +2,24 @@
 layout: default
 ---
 <div class="home-hero">
-  <h1 class="hero-title">{{ site.title | escape }}</h1>
-
-  <p class="hero-tagline">
-    <a href="{{ '/family/' | relative_url }}">Dad &amp; husband</a>,
-    <a href="{{ '/engineer/' | relative_url }}">engineer</a>,
-    <a href="{{ '/explorer/' | relative_url }}">explorer</a>.
-  </p>
+  <h1 class="home-about-title">About</h1>
 
   <p class="hero-intro">
     만들고, 기록하고, 탐험하는 엔지니어입니다.<br>
     가족과의 일상, 일과 배움, 취미와 장비 이야기를 이곳에 남깁니다.
   </p>
+
+  <div class="home-recent">
+    <h2 class="home-recent-title">Recent</h2>
+    <ul class="home-recent-list">
+      {%- for post in site.posts limit: 3 -%}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </div>
 
   <p class="hero-links">
     <a href="{{ '/archive/' | relative_url }}">Archive</a>
