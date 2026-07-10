@@ -1,7 +1,7 @@
 ---
 layout: category
-title: Family
+title: "Dad & husband"
 category: family
 permalink: /family/
-description: 아빠와 남편으로 사는 이야기.
+description: Life as a dad and husband.
 ---
