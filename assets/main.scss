@@ -76,6 +76,7 @@ code {
   padding: 20px 0;
   font-size: 0.9em;
   color: $grey-color;
+  text-align: right;
 
   .footer-line {
     margin-bottom: 0;
@@ -198,6 +199,10 @@ code {
 
 .category-page .page-heading {
   font-size: 1.4em;
+}
+
+.category-page .post-link {
+  font-size: 1.25em;
 }
 
 .category-count {
