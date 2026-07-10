@@ -31,6 +31,13 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# per-category feeds at /feed/<category>.xml (main /feed.xml unchanged)
+feed:
+  categories:
+    - family
+    - engineer
+    - explorer
+
 exclude:
   - CLAUDE.md
 
