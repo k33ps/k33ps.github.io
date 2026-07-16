@@ -6,7 +6,7 @@ tags: [LLM, Agent, Supply-chain, AI]
 published: True
 ---
 
-> Series: [Part 1, Architecture](2026-07-01-Building-an-AI-agent-that-makes-supply-chain-decisions.md) · [Part 2, Grading judgment](2026-07-08-How-to-grade-an-AI's-judgment.md) · Part 3, What broke
+> Series: [Part 1, Architecture](./2026-07-01-Building-an-AI-agent-that-makes-supply-chain-decisions.md) · [Part 2, Grading judgment](./2026-07-08-How-to-grade-an-AI's-judgment.md) · Part 3, What broke
 
 This series is the record of building BOM Pilot, an agent that reads part-discontinuation notices (PCNs) and decides a response strategy — last-time-buy (ltb), replace, redesign, or accept_risk. Part 1 was the architecture: the LLM judges, code computes — judgment sits at exactly two points, and a deterministic critic re-verifies every submitted strategy against hard constraints. Part 2 was the grading: 17 scenarios whose facts force the correct answer, a fully deterministic pass gate, security canaries, and a reproducibility metric — final score 14/17. This post is about what that grading system actually caught.
 
@@ -74,4 +74,4 @@ The least flashy of the five cases, and possibly the most important. That saving
 
 To be explicit about what this PoC is not: the security testing is basic hygiene — single-turn, English-only; multilingual injection and multi-turn manipulation are out of scope. When one notice hits several BOMs, the agent fully resolves one of them. Substitute compatibility is judged from the catalog's alternates, compliance, and availability data; full drop-in verification at the pinout and firmware level is flagged, honestly, as a separate engineering step. Input is pasted text; there is no PDF parsing.
 
-> Series: [Part 1, Architecture](2026-07-01-Building-an-AI-agent-that-makes-supply-chain-decisions.md) · [Part 2, Grading judgment](2026-07-08-How-to-grade-an-AI's-judgment.md) · Part 3, What broke
+> Series: [Part 1, Architecture](./2026-07-01-Building-an-AI-agent-that-makes-supply-chain-decisions.md) · [Part 2, Grading judgment](./2026-07-08-How-to-grade-an-AI's-judgment.md) · Part 3, What broke

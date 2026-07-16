@@ -6,7 +6,7 @@ tags: [LLM, Agent, Supply-chain, AI]
 published: True
 ---
 
-> Series: [Part 1, Architecture](2026-07-01-Building-an-AI-agent-that-makes-supply-chain-decisions.md) · Part 2, Grading judgment · [Part 3, What broke](2026-07-15-I-improved-the-search-and-the-agent-got-worse.md)
+> Series: [Part 1, Architecture](./2026-07-01-Building-an-AI-agent-that-makes-supply-chain-decisions.md) · Part 2, Grading judgment · [Part 3, What broke](./2026-07-15-I-improved-the-search-and-the-agent-got-worse.md)
 
 This series is the record of building BOM Pilot, an agent that reads part-discontinuation notices (PCNs) and decides a response strategy — last-time-buy (ltb), replace, redesign, or accept_risk. To recap the architecture from Part 1: LLM judgment is placed at exactly two points, interpreting the notice and deciding the strategy. Every number comes from the database. And the final decision comes out as a structured submission, not prose — the strategy plus the list of numbers it was based on (the *basis*). This post covers the hardest problem in the project: grading that judgment.
 
@@ -39,4 +39,4 @@ The last measurement is reproducibility. An agent that gives different answers t
 
 Results. On the final baseline — one full run against one commit — 14 of 17 passed. Interpretation accuracy 1.00; strategy fit 0.94 (no scenario chose an unacceptable strategy; the two failures chose strategies the answer key doesn't list); basis-fact grounding 0.94; flip-pairs 2/2; security 5/5; canary leaks 0. Narrative quality averaged 3.8/5 on the preceding judge-enabled full run (the baseline run was scored with the judge off — it never gates a pass). The three failures are left in the results table as they are. And more interesting than these numbers is what broke on the way here — the subject of Part 3.
 
-> Series: [Part 1, Architecture](2026-07-01-Building-an-AI-agent-that-makes-supply-chain-decisions.md) · Part 2, Grading judgment · [Part 3, What broke](2026-07-15-I-improved-the-search-and-the-agent-got-worse.md)
+> Series: [Part 1, Architecture](./2026-07-01-Building-an-AI-agent-that-makes-supply-chain-decisions.md) · Part 2, Grading judgment · [Part 3, What broke](./2026-07-15-I-improved-the-search-and-the-agent-got-worse.md)

@@ -6,7 +6,7 @@ tags: [LLM, Agent, Supply-chain, AI]
 published: True
 ---
 
-> Series: Part 1, Architecture · [Part 2, Grading judgment](2026-07-08-How-to-grade-an-AI's-judgment.md) · [Part 3, What broke](2026-07-15-I-improved-the-search-and-the-agent-got-worse.md)
+> Series: Part 1, Architecture · [Part 2, Grading judgment](./2026-07-08-How-to-grade-an-AI's-judgment.md) · [Part 3, What broke](./2026-07-15-I-improved-the-search-and-the-agent-got-worse.md)
 
 Electronics manufacturers receive documents like this. A chip maker sends a PCN (Product Change Notice) — a notice that something about a part you use is changing. On the light end: "the marking on the package surface will change." On the heavy end: "this part goes out of production in six months (EOL); last orders accepted through March." The problem is that these documents don't arrive in a readable form. Every manufacturer uses a different format, and the information that actually matters — which parts are affected, when the last-order deadline is, what the recommended substitute is — is scattered between boilerplate and legal language. It's not structured data. It's a document a human has to read and interpret.
 
@@ -106,4 +106,4 @@ Looking back, the essence of the mistake wasn't framework choice — it was boun
 
 To lead with the outcome: this agent passes 14 of 17 evaluation scenarios and defends all 5 security scenarios. But that number stands on a much harder question than "how many passed" — who decides whether the agent's decision was right, and with what? Part 2 is the story of that grading.
 
-> Series: Part 1, Architecture · [Part 2, Grading judgment](2026-07-08-How-to-grade-an-AI's-judgment.md) · [Part 3, What broke](2026-07-15-I-improved-the-search-and-the-agent-got-worse.md)
+> Series: Part 1, Architecture · [Part 2, Grading judgment](./2026-07-08-How-to-grade-an-AI's-judgment.md) · [Part 3, What broke](./2026-07-15-I-improved-the-search-and-the-agent-got-worse.md)
